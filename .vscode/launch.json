@@ -3,7 +3,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Crinkrement",
+      "name": "CountingMad",
       "program": "${workspaceFolder}/.vscode/run.js",
       "preLaunchTask": "build",
       "internalConsoleOptions": "neverOpen",

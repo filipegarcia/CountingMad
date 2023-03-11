@@ -23,14 +23,6 @@ local highscores = playdate.datastore.read( "highscore" ) or {main = 0}
 local highScoreSoundPlay = highscores["main"]-10
 
 
-function calendar()
-  local time = playdate.getSecondsSinceEpoch()
-  print(time)
-  local daySeconds = 86400
-  highscores["calendar"] = 0
-end
-calendar()
-
 function problem(debug)
   operator = math.floor(math.random(0,1))
 
