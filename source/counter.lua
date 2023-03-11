@@ -19,6 +19,7 @@ local expectedSolution = nil
 local score = 0
 local debugCount = false
 local penalizeWrongAnswers = false
+local maxDigits = 999
 -- Load highscores
 local highscores = playdate.datastore.read( "highscore" ) or {main = 0}
 local highScoreSoundPlay = highscores["main"]-10
@@ -29,12 +30,12 @@ function problem(debug)
 
   if operator == 1 then
     operatorVal = '+'
-    a = math.floor(math.random(0,999))
-    b = math.floor(math.random(0, 999))
+    a = math.floor(math.random(0, maxDigits))
+    b = math.floor(math.random(0, maxDigits))
     actualSolution = a+b
   else
     operatorVal = '-'
-    a = math.floor(math.random(0,999))
+    a = math.floor(math.random(0, maxDigits))
     b = math.floor(math.random(0, a))
     actualSolution = a-b
   end 
