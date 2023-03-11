@@ -2,5 +2,5 @@ name=CountingMad
 author=Filipe Garcia
 description=Count the Crank
 bundleID=com.filipegarcia.CountingMad
-version=1.3
+version=1.4
 imagePath=assets/covers

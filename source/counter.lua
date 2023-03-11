@@ -18,6 +18,7 @@ local actualSolution = nil
 local expectedSolution = nil
 local score = 0
 local debugCount = false
+local penalizeWrongAnswers = false
 -- Load highscores
 local highscores = playdate.datastore.read( "highscore" ) or {main = 0}
 local highScoreSoundPlay = highscores["main"]-10
@@ -73,7 +74,9 @@ function problem_solved()
 end
 
 function problem_error()
-  score -=1
+  if penalizeWrongAnswers then 
+    score -=1
+  end  
   errorSound:play()
   highscoreUpdate()
 end
